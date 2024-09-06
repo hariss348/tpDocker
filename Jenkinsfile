@@ -11,13 +11,6 @@ pipeline {
         checkout scm
       }
     }
-    stage('Version'){
-      steps {
-        script{
-          sh 'docker-compose --version'
-        }
-      }
-    }
     stage('Builder limage'){
       steps{
         script{
