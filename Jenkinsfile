@@ -14,14 +14,14 @@ pipeline {
     stage('Builder limage'){
       steps{
         script{
-          sh 'docker-compose up -d'
+          sh 'sudo docker-compose up -d'
         }
       }
     }
     stage('Surveiller etats des services'){
       steps{
         script{
-          sh 'docker-compose ps'
+          sh 'sudo docker-compose ps'
         }
       }
     }
