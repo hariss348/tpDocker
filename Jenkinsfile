@@ -35,8 +35,7 @@ pipeline {
     stage('Stopper les services'){
       steps{
         script{
-          sh 'docker stop'
-          sh 'docker rm'
+          sh 'docker stop $(docker ps -q)'
         }
       }
     }
